@@ -1,0 +1,94 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    padding: 16px;
+    box-shadow: 0px 1px 3px -2px black;
+  }
+ .n-logo{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+} 
+.n-logo> span{
+    color: #171717;
+    font-size: 38px;
+    font-weight: 600;
+     user-select: none;
+    
+}
+.n-menue{
+    display: flex;
+    align-items: center;
+    color: #626262;
+}
+.n-menue>ul {
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    gap: 50px;
+    list-style: none;
+    list-style: none;
+    text-decoration: none;
+
+}
+.n-menue ul li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    cursor: pointer;
+    user-select: none;
+    
+}
+.n-menue ul li hr{
+    border: none;
+    width: 80%;
+    height: 3px;
+    border-radius: 10px;
+    background: #FF4141;
+}
+.n-login-cart{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+
+}
+.my-login-btn{
+    width: 157px;
+    height: 58px;
+    outline: none;
+    border: 1px solid#7a7a7a;
+    border-radius: 75px;
+    color: #515151;
+    font-size: 20px;
+    font-weight: 500;
+    background: white;
+    cursor: pointer;
+}
+.my-login-btn:active{
+    background: #F7F7F7;
+}
+.n-login-cart Link img{
+    position: absolute;
+    left: 1130px;
+
+  
+}
+.nav-cart-count{
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: c;
+    margin-top: -35px;
+    margin-left: -55px;
+    border-radius: 11px;
+    font-size: 14px;
+    background: red;
+    color: white;
+}
