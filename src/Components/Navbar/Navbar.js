@@ -3,11 +3,15 @@ import Logo from "../Assets/logo.png";
 import cart_icon from "../Assets/cart_icon.png"
 import "./Navbar.css";
 import Button from 'react-bootstrap/Button';
-import { Link } from 'react-router-dom';
+import { Link, } from 'react-router-dom';
+import { ShopContext } from '../Contexts/ShopContext';
+import { useContext } from 'react';
+
 
 
 const Navbar = () => {
     const [menue,setmenue]=useState("shop");
+    const {getTotalCartItems}=useContext(ShopContext);
     return (
         <div className='navbar'>
             <div className='n-logo'>
@@ -29,7 +33,7 @@ const Navbar = () => {
             <Link to="/login"> <Button variant="primary" className="my-login-btn">Login</Button></Link>
            <Link to="/cart" style={{position:"absolute" , left:"1120px"}}> <img src={cart_icon} alt="" /></Link>
              </div>
-            <div className='nav-cart-count'>0</div>
+            <div className='nav-cart-count'>{getTotalCartItems()}</div>
 
 
         </div>

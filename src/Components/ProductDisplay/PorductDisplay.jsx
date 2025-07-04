@@ -3,10 +3,12 @@ import "./ProductDisplay.css"
 import star_icon from "../Assets/star_icon.png"
 import star_dull_icon from "../Assets/star_dull_icon.png";
 import { ShopContext } from '../Contexts/ShopContext';
-
+import { useNavigate } from "react-router-dom";
 const PorductDisplay = (props) => {
      const {product}=props   //yaha destructuring ka concept use hoo ha hai 
      const{addToCart}=useContext(ShopContext);
+     const navigate = useNavigate();
+
   return (
     <div className='productdisplay'>
         <div className='productdisplay-left'>
@@ -50,7 +52,7 @@ const PorductDisplay = (props) => {
                     <div>XL</div>
                     <div>XXL</div> 
                 </div>
-                <button onClick={()=>{addToCart(product.id)}}>ADD TO CART</button>
+                <button onClick={()=>{addToCart(product.id);navigate("/cart");}}>ADD TO CART</button>
                 <p className="productdisplay-right-categorys">
                     <span>Categeory:</span>Women ,T-shirts ,Crop top
                 </p>
