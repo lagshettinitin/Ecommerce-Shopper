@@ -1,6 +1,5 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import CartItems from '../Cartitems/CartItems';
-import { ShopContext } from '../Contexts/ShopContext';
 
 function Cart() {
  
