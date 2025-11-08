@@ -1,12 +1,12 @@
 .offers{
-    width: 65%;
-    height: 60vh;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 320px;
     display: flex;
-    margin: auto;
-    padding: 0px 140px;
-    margin-top: 250px;
-    margin-bottom: 150px;
+    margin: 200px auto 150px;
+    padding: 40px 24px;
     background: linear-gradient(180deg,#fde1ff 0%,#e1ffea22 60%);
+    box-sizing: border-box;
 }
 .offers-left {
     flex: 1;
@@ -48,4 +48,25 @@
     max-width: 400px;
     object-fit: contain;
     height: 350px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .offers{
+    margin-top: 140px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .offers{
+    flex-direction: column;
+    gap: 24px;
+    margin: 100px auto 80px;
+    padding: 24px 16px;
+  }
+  .offers-right img{
+    height: auto;
+    max-width: 300px;
+  }
 }

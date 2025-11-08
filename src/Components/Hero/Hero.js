@@ -6,10 +6,10 @@ import hero_image from '../Assets/hero_image.png';
 
 const Hero = () => {
   return (
-    <div className="hero container-fluid px-4">
+    <div className="hero container-fluid px-4 anim-fade">
       <div className="hero-wrapper d-flex flex-column flex-md-row align-items-center">
         {/* LEFT */}
-        <div className="hero-left w-100 w-md-50">
+        <div className="hero-left w-100 w-md-50 anim-up">
           <h2>NEEW ARRIVALS ONLY</h2>
           <div className="hero-hand-icon">
             <p>new</p>
@@ -25,7 +25,7 @@ const Hero = () => {
 
         {/* RIGHT */}
         <div className="hero-right w-100 w-md-50 text-center">
-          <img src={hero_image} alt="" />
+          <img className="anim-scale" src={hero_image} alt="" />
         </div>
       </div>
     </div>

@@ -8,3 +8,23 @@
     margin:  60px 170px;
     text-transform: capitalize;
 }
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .Breadcrum{ margin: 40px 40px; }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .Breadcrum{
+    margin: 16px;
+    font-size: 14px;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .Breadcrum{ font-size: 13px; }
+}

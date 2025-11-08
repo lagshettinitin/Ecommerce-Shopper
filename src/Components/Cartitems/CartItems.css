@@ -1,5 +1,5 @@
 .cartitems{
-    margin: 100px 170px;
+    margin: 60px 170px;
 }
 .cartitems hr{
     height: 3px;
@@ -104,3 +104,53 @@
     margin-left: 0px;
 }
   
+/* Tablet */
+@media (max-width: 1024px) {
+  .cartitems{ margin: 40px 40px; }
+  .cartitems-total{ margin-right: 60px; }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .cartitems{ margin: 24px 16px; }
+  /* Hide table-like header */
+  .cartitems-header{ display: none; }
+
+  /* Each cart item becomes a card */
+  .cartitem-row{
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-auto-rows: auto;
+    gap: 10px 16px;
+    padding: 12px;
+    border: 1px solid #eeeeee;
+    border-radius: 12px;
+    background: #fff;
+  }
+  .cartitem-row .carticon-product-icon{
+    grid-column: 1 / 2;
+    grid-row: 1 / 5;
+    width: 90px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  .cartitem-row p,
+  .cartitem-row .cartitems-quantity{
+    grid-column: 2 / 3;
+    font-weight: 500;
+  }
+  .cartitem-row p{ margin: 0; }
+  .cartitem-row p:nth-of-type(1)::before{ content: 'Title'; display: block; color: #888; font-size: 12px; margin-bottom: 2px; }
+  .cartitem-row p:nth-of-type(2)::before{ content: 'Price'; display: block; color: #888; font-size: 12px; margin-bottom: 2px; }
+  .cartitems-quantity::before{ content: 'Quantity'; display: block; color: #888; font-size: 12px; margin-bottom: 2px; }
+  .cartitem-row p:nth-of-type(3)::before{ content: 'Total'; display: block; color: #888; font-size: 12px; margin-bottom: 2px; }
+  .cartitems-quantity{ width: 100%; max-width: 120px; height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+  .cartitem-row .cartitems-remove-icon{ grid-column: 2 / 3; justify-self: end; width: 16px; margin: 0; }
+
+  .cartitems-down{ flex-direction: column; gap: 24px; }
+  .cartitems-total{ margin-right: 0; }
+  .cartitems-promobox{ width: 100%; padding: 8px 8px 8px 12px; height: auto; display: grid; grid-template-columns: 1fr; gap: 8px; background: transparent; }
+  .cartitems-promobox input{ width: 100%; height: 44px; background: #eaeaea; border-radius: 8px; padding-left: 12px; }
+  .cartitems-promobox button{ width: 100%; height: 44px; margin-top: 0; }
+}

@@ -52,7 +52,7 @@ const PorductDisplay = (props) => {
                     <div>XL</div>
                     <div>XXL</div> 
                 </div>
-                <button onClick={()=>{addToCart(product.id);navigate("/cart");}}>ADD TO CART</button>
+                <button className='productdisplay-addtocart-desktop' onClick={()=>{addToCart(product.id);navigate("/cart");}}>ADD TO CART</button>
                 <p className="productdisplay-right-categorys">
                     <span>Categeory:</span>Women ,T-shirts ,Crop top
                 </p>
@@ -64,6 +64,13 @@ const PorductDisplay = (props) => {
                 
                 
 
+        </div>
+        {/* Mobile sticky add to cart bar */}
+        <div className='productdisplay-stickybar'>
+          <div className='stickybar-inner'>
+            <div className='sticky-price'>${product.new_price}</div>
+            <button className='sticky-addtocart' onClick={()=>{addToCart(product.id);navigate("/cart");}}>ADD TO CART</button>
+          </div>
         </div>
     </div>
   )

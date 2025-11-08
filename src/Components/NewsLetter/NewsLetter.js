@@ -3,10 +3,10 @@ import "./NewsLetter.css";
 
 const NewsLetter = () => {
   return (
-    <div className='news-letter'>
-        <h1>Get Exclusive Offers On Your Email</h1>
-        <p>Susbscribe to our newletter and stay updated</p>
-        <div><input type='email' placeholder='Your Email id'/>
+    <div className='news-letter anim-fade'>
+        <h1 className='anim-up'>Get Exclusive Offers On Your Email</h1>
+        <p className='anim-up'>Susbscribe to our newletter and stay updated</p>
+        <div className='anim-up'><input type='email' placeholder='Your Email id'/>
              <button>Susbscribe</button>
         </div>
     </div>

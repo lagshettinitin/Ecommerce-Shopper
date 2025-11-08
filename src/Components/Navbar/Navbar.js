@@ -11,6 +11,7 @@ import { useContext } from 'react';
 
 const Navbar = () => {
     const [menue,setmenue]=useState("shop");
+    const [menuOpen, setMenuOpen] = useState(false);
     const {getTotalCartItems}=useContext(ShopContext);
     return (
         <div className='navbar'>
@@ -19,8 +20,9 @@ const Navbar = () => {
             <span>SHOPPER</span>
 
             </div>
-            <div className="n-menue">
-                <ul>
+            <button className='n-burger' aria-label="Toggle menu" aria-expanded={menuOpen} onClick={()=>setMenuOpen(o=>!o)}>☰</button>
+            <div className={`n-menue ${menuOpen ? 'open' : ''}`} role="navigation">
+                <ul onClick={()=>setMenuOpen(false)}>
                     
                     <li onClick={()=>{setmenue("shop")}}><Link style={{textDecoration:"none" ,color:" #626262"}} to="/">Shop</Link>{menue==="Shop"?<hr/>:<></>}</li>
                     <li onClick={()=>{setmenue("mens")}}><Link style={{textDecoration:"none" ,color:" #626262"}} to="/mens">Men</Link>{menue==="mens"?<hr/>:<></>}</li>
@@ -30,11 +32,13 @@ const Navbar = () => {
 
             </div>
             <div className='n-login-cart'>
-            <Link to="/login"> <Button variant="primary" className="my-login-btn">Login</Button></Link>
-           <Link to="/cart" style={{position:"absolute" , left:"1120px"}}> <img src={cart_icon} alt="" /></Link>
-             </div>
-            <div className='nav-cart-count'>{getTotalCartItems()}</div>
-
+              <Link to="/login"> <Button variant="primary" className="my-login-btn">Login</Button></Link>
+              <div className='cart-with-badge'>
+                <Link to="/cart"> <img src={cart_icon} alt="" /></Link>
+                <div className='nav-cart-count'>{getTotalCartItems()}</div>
+              </div>
+            </div>
+            {menuOpen && <div className="n-backdrop" onClick={()=>setMenuOpen(false)} aria-hidden="true"></div>}
 
         </div>
     )

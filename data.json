@@ -1,0 +1,17 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "iPhone 14",
+      "price": 79999,
+      "description": "Apple iPhone 14 with A15 Bionic chip"
+    },
+    {
+      "id": 2,
+      "name": "Samsung Galaxy S22",
+      "price": 69999,
+      "description": "Samsung flagship phone with Snapdragon 8 Gen 1"
+    }
+  ]
+}
+

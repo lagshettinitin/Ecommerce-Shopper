@@ -6,7 +6,7 @@
     margin-bottom: 100px;
     margin-top: -50px;
     width: 100%;
-    padding: 100px;
+    padding: 60px 24px;
 }
 .new-collections h1{
     color: #171717;
@@ -28,8 +28,40 @@
 }
 .collections{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     margin-top: 50px;
     gap: 30px;
 
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .new-collections h1{
+    font-size: 36px;
+  }
+  .collections{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .new-collections{
+    padding: 40px 16px;
+  }
+  .new-collections h1{
+    font-size: 28px;
+  }
+  .collections{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .collections{
+    grid-template-columns: 1fr;
+  }
 }
