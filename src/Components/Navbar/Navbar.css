@@ -16,6 +16,10 @@
     gap: 10px;
     align-items: center;
 } 
+.n-logo img{
+    height: 40px;
+    width: auto;
+}
 .n-logo> span{
     color: #171717;
     font-size: 38px;
@@ -122,8 +126,8 @@
 /* Mobile */
 @media (max-width: 768px) {
   .navbar{
-    flex-wrap: wrap;
-    gap: 12px;
+    flex-wrap: nowrap;
+    gap: 8px;
     position: sticky;
   }
   .n-burger{
@@ -169,6 +173,8 @@
     padding: 0 16px;
     font-size: 14px;
   }
+  .n-login-cart{ gap: 12px; }
+  .n-login-cart a img{ width: 24px; height: 24px; }
   .nav-cart-count{
     top: -4px;
     right: -6px;

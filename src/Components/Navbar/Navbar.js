@@ -24,10 +24,10 @@ const Navbar = () => {
             <div className={`n-menue ${menuOpen ? 'open' : ''}`} role="navigation">
                 <ul onClick={()=>setMenuOpen(false)}>
                     
-                    <li onClick={()=>{setmenue("shop")}}><Link style={{textDecoration:"none" ,color:" #626262"}} to="/">Shop</Link>{menue==="Shop"?<hr/>:<></>}</li>
+                    <li onClick={()=>{setmenue("shop")}}><Link style={{textDecoration:"none" ,color:" #626262"}} to="/">Shop</Link>{menue==="shop"?<hr/>:<></>}</li>
                     <li onClick={()=>{setmenue("mens")}}><Link style={{textDecoration:"none" ,color:" #626262"}} to="/mens">Men</Link>{menue==="mens"?<hr/>:<></>}</li>
                     <li onClick={()=>{setmenue("women")}}><Link style={{textDecoration:"none" ,color:" #626262"}} to="/women">Women</Link>{menue==="women"?<hr/>:<></>}</li>
-                    <li onClick={()=>{setmenue("kids")}}><Link style={{textDecoration:"none" ,color:" #626262"} }to="/kids">Kids</Link>{menue==="kids"?<hr/>:<></>}</li>
+                    <li onClick={()=>{setmenue("kids")}}><Link style={{textDecoration:"none" ,color:" #626262" } }to="/kids">Kids</Link>{menue==="kids"?<hr/>:<></>}</li>
                 </ul>
 
             </div>

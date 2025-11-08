@@ -10,7 +10,7 @@ const Hero = () => {
       <div className="hero-wrapper d-flex flex-column flex-md-row align-items-center">
         {/* LEFT */}
         <div className="hero-left w-100 w-md-50 anim-up">
-          <h2>NEEW ARRIVALS ONLY</h2>
+          <h2>NEW ARRIVALS ONLY</h2>
           <div className="hero-hand-icon">
             <p>new</p>
             <img src={hand_icon} alt="" />
